@@ -1,5 +1,4 @@
 import styles from "../styles/Navigation.module.scss"
-import Image from "next/image"
 
 const Navigation = ({ locale, locales }) => {
   const resolveMovies = {
@@ -18,9 +17,9 @@ const Navigation = ({ locale, locales }) => {
     en: 'Shop',
     nl: 'Winkel',
   }
-  let homeurl = "/";
-  if (locale != 'default') {
-    homeurl = "/" + locale;
+  let homeurl="/";
+  if(locale!='default'){
+    homeurl = "/"+locale;
   }
 
   const defaultLocale = locale === 'en' ? '/' : `/${locale}/`
@@ -30,12 +29,11 @@ const Navigation = ({ locale, locales }) => {
 
         <div className={styles.navlogo}>
           <a href={homeurl}>
-            {/* <img
+            <img
               src="https://a.storyblok.com/f/133261/3039x582/a60d166ec2/logo-colored-full.png/m/200x0"
               alt="IMDBPlus Logo"
               className=""
-            /> */}
-            <Image src="/logo-colored-full.png" alt="IMDBPlus Logo" width="128" height="25" />
+            />
           </a>
         </div>
         <div className={styles.navlinkswrapper}>
