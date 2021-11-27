@@ -24,4 +24,8 @@ const BlogPost = ({ blok }) => {
 }
 
 export default BlogPost
+<<<<<<< HEAD
 //test123
+=======
+// bye
+>>>>>>> 688be677fddd8a130d56db8101e1e477b1921d7f
