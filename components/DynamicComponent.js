@@ -24,6 +24,7 @@ import EmailOptin from './EmailOptin'
 import TwoCol from './TwoCol'
 import Title from './Title'
 import TopMovies from './TopMovies'
+import AgeRating from './AgeRating'
 
 const Components = {
   'teaser': Teaser,
@@ -51,7 +52,8 @@ const Components = {
   'emailoptin':EmailOptin,
   'twocol':TwoCol,
   'title':Title,
-  'topmovies':TopMovies
+  'topmovies':TopMovies,
+  'agerating':AgeRating
 }
 
 
