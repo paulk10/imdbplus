@@ -91,13 +91,16 @@ const Movie = ({ data, level }) => {
               </div>
             ))}
           </div>
-          <div className={styles.genrelist}>
+          
+          <div className={styles.ageratinglist}>
             {ageratings.map((item, index) => (
-              <div className={styles.genre}>
+              <a href={`/${item.full_slug}`}><div className={styles.agerating}>
                 {item.content.title}
-              </div>
+              </div></a>
             ))}
           </div>
+        
+
           <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}>
           </div>
           <div className={styles.imagegallery}>
