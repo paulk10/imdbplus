@@ -36,7 +36,7 @@ const City = ({ data, level }) => {
           </h1>
 
           <div className={styles.score}>
-            Score {render(content.population)}
+            Population: {render(content.population)}
           </div>
 
           <div className={styles.description}>

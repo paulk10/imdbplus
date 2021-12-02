@@ -21,6 +21,11 @@ const CityList = ({ data, level, locale }) => {
       });
   }
 
+  const [items, setItems] = useState([]);
+  getAllItems('city', locale, sortby).then(
+    function (result) {
+      setItems(result.data.stories);
+    });
 
   return (
     <div className={styles.list}>

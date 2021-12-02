@@ -32,7 +32,7 @@ const SmallCardList = ({ items, title, type }) => {
         return (
           <div className={styles.smallcardwrapper}>
             {type == "product" && <SmallCard lang={lang} title={item.content.title} picture={item.content.mainpicture.filename} url={item.full_slug} type={type} price={item.content.price} />}
-            {type != "product" && <SmallCard lang={lang} title={item.content.title}  url={item.full_slug} type={type} />}
+            {type != "product" && <SmallCard lang={lang} title={item.content.title} picture={item.content.mainpicture.filename} url={item.full_slug} type={type} />}
           </div>
         );
       })}
