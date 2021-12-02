@@ -7,6 +7,10 @@ const NavigationMobile = ({ locale, locales }) => {
     en: 'Movies',
     nl: 'Films',
   }
+  const resolveCities = {
+    en: 'Cities',
+    nl: 'Stede',
+  }
   const resolvePeople = {
     en: 'People',
     nl: 'Mensen',
@@ -45,6 +49,9 @@ const NavigationMobile = ({ locale, locales }) => {
           <div className={styles.navlinks}>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/cities`} className={styles.movie}>{resolveCities[locale]}</a>
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
