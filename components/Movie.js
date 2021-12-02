@@ -110,6 +110,11 @@ const Movie = ({ data, level }) => {
           <div className={styles.short}>
             {render(content.short)}
           </div>
+
+          <div className={styles.score}>
+            Score {render(content.score)}
+          </div>
+
           <div className={styles.synopsis}>
             {render(content.synopsis)}
           </div>
