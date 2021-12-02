@@ -30,7 +30,7 @@ const City = ({ data, level }) => {
     <SbEditable content={content} key={content._uid}>
       <main>
         {/* <div className={[styles.movie, styles.test].join(' ')}> */}
-        <div className={styles.movie}>
+        <div className={styles.city}>
           <h1 className={styles.title}>
             {content.title}
           </h1>
@@ -39,7 +39,7 @@ const City = ({ data, level }) => {
             Score {render(content.population)}
           </div>
 
-          <div className={styles.synopsis}>
+          <div className={styles.description}>
             {render(content.description)}
           </div>
         </div>
