@@ -8,47 +8,37 @@ import RelatedItemGallery from "./RelatedItemGallery"
 import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
 
-// const resolveDirectors = {
-//   en: 'Directors',
-//   nl: 'Regisseurs',
-// }
-
 const Restaurant = ({ data, level }) => {
-  var locale = 'en';
-  //enriching data
   if (level === 'data') {
-    locale = data.story.lang;
     var content = data.story.content;
   } else {
     var content = data;
   }
-
+  
   //returning the HTML
   return (
     <SbEditable content={content} key={content._uid}>
       <main>
-        {/* <div className={[styles.movie, styles.test].join(' ')}> */}
-        <div className={styles.city}>
+        <div className={styles.restaurant}>
           <h1 className={styles.title}>
-            {content.title}
+          {content.title}
           </h1>
 
-          <div className={styles.rating}>
-            Rating: {render(content.rating)}
-          </div>
+          <div className={styles.score}>
+             Rating: {render(content.rating)}
+           </div>
 
-          <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}>
-          </div>
+          <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}></div>
+          
+          <div className={styles.description}>
+             {render(content.description)}
+           </div>
 
-          <div className={styles.description}>
-            {render(content.description)}
-          </div>
-        
-          <div className={styles.description}>
+           <div className={styles.description}>
             {render(content.adress)}
-          </div>
+            </div>
 
-        </div>
+          </div>
       </main>
     </SbEditable>
   )

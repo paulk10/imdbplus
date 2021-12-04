@@ -8,32 +8,23 @@ import RelatedItemGallery from "./RelatedItemGallery"
 import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
 
-// const resolveDirectors = {
-//   en: 'Directors',
-//   nl: 'Regisseurs',
-// }
-
 const Bar = ({ data, level }) => {
-  var locale = 'en';
-  //enriching data
   if (level === 'data') {
-    locale = data.story.lang;
     var content = data.story.content;
   } else {
     var content = data;
   }
 
-
-
   //returning the HTML
   return (
     <SbEditable content={content} key={content._uid}>
       <main>
-        {/* <div className={[styles.movie, styles.test].join(' ')}> */}
         <div className={styles.bar}>
           <h1 className={styles.title}>
             {content.title}
           </h1>
+
+          <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}></div>
 
           <div className={styles.description}>
             {render(content.description)}
