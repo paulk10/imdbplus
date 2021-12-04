@@ -15,14 +15,14 @@ const RestaurantList = ({ data, level, locale }) => {
 
   function updateSortby(sortby){
     setSortby(sortby);
-    getAllItems('city', locale, sortby).then(
+    getAllItems('restaurant', locale, sortby).then(
       function (result) {
         setItems(result.data.stories);
       });
   }
 
   const [items, setItems] = useState([]);
-  getAllItems('city', locale, sortby).then(
+  getAllItems('restaurant', locale, sortby).then(
     function (result) {
       setItems(result.data.stories);
     });

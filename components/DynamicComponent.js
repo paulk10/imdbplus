@@ -28,6 +28,7 @@ import AgeRating from './AgeRating'
 import City from './City'
 import CityList from './CityList'
 import Restaurant from './Restaurant'
+import RestaurantList from './RestaurantList'
 
 const Components = {
   'teaser': Teaser,
@@ -59,7 +60,8 @@ const Components = {
   'agerating':AgeRating,
   'city':City,
   'citylist':CityList,
-  'restaurant':Restaurant
+  'restaurant':Restaurant,
+  'restaurantlist':RestaurantList
 
 }
 
