@@ -15,6 +15,7 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   gap: 24px;
+ 
 
   .footer {
     grid-column: 2 / span 10;
@@ -30,6 +31,7 @@
   @media (min-width: 1920px) {
     .footer {
       grid-column: 4 / span 6;
+      
     }
   }
 }

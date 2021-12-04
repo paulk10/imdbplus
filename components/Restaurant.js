@@ -23,8 +23,6 @@ const Restaurant = ({ data, level }) => {
     var content = data;
   }
 
-
-
   //returning the HTML
   return (
     <SbEditable content={content} key={content._uid}>
@@ -37,6 +35,9 @@ const Restaurant = ({ data, level }) => {
 
           <div className={styles.rating}>
             Rating: {render(content.rating)}
+          </div>
+
+          <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}>
           </div>
 
           <div className={styles.description}>

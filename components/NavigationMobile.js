@@ -50,7 +50,7 @@ const NavigationMobile = ({ locale, locales }) => {
           <a href="/">
             <img
               src="https://a.storyblok.com/f/136715/372x373/e6af83683f/trip-advisor-photoroom.png"
-              alt="IMDBPlus Logo"
+              alt="TripAdvisorPlus Logo"
               className=""
             />
           </a>
