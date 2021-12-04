@@ -39,12 +39,6 @@ const Restaurant = ({ data, level }) => {
             Rating: {render(content.rating)}
           </div>
 
-          <div className={styles.rating}>
-            Price: {render(content.price)}
-          </div>
-
-          
-
           <div className={styles.description}>
             {render(content.description)}
           </div>

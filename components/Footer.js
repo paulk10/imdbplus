@@ -7,7 +7,7 @@ const Footer = () => {
 
         <div className="">
           <img
-            src="https://a.storyblok.com/f/136715/500x500/348ac65501/trip-advisor.png"
+            src="https://a.storyblok.com/f/136715/500x500/90bba15187/trip-advisor-photoroom.png"
             alt="IMDBPlus Logo"
             className=""
           />
