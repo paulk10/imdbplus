@@ -27,6 +27,7 @@ import TopMovies from './TopMovies'
 import AgeRating from './AgeRating'
 import City from './City'
 import CityList from './CityList'
+import Restaurant from './Restaurant'
 
 const Components = {
   'teaser': Teaser,
@@ -57,7 +58,8 @@ const Components = {
   'topmovies':TopMovies,
   'agerating':AgeRating,
   'city':City,
-  'citylist':CityList
+  'citylist':CityList,
+  'restaurant':Restaurant
 
 }
 

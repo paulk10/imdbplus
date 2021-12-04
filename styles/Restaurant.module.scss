@@ -1,0 +1,100 @@
+@import '../styles/colors';
+
+.movie {
+  .mainpicture {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0px 10px #000;
+    margin-bottom: 40px;
+  }
+
+  .short {
+    font-weight: 800;
+  }
+
+  .genrelist {
+    display: flex;
+    margin-bottom: 40px;
+
+    .genre {
+      padding: 5px 20px;
+      background-color: #f0f0f0;
+      max-width: 100px;
+      margin-right: 10px;
+      font-weight: 700;
+    }
+  }
+
+  .ageratinglist {
+    display: flex;
+    margin-bottom: 40px;
+
+    .agerating {
+      padding: 5px 20px;
+      background-color:$color-background-tag;
+      max-width: 100px;
+      margin-right: 10px;
+      font-weight: 700;
+   
+    }
+  }
+
+  .population {
+    padding: 5px 20px;
+    background-color:$color-background-tag;
+    max-width: 100px;
+    margin-right: 10px;
+    font-weight: 700;
+  }
+
+  .peoplesegment {
+    margin-top:40px;
+    .title {
+
+      font-size: 1.4em;
+      font-weight: 800;
+      margin-bottom: 20px;
+
+    }
+
+    .content {}
+  }
+
+  .title {}
+
+  .summary {}
+
+  .description {}
+
+  .introduction {}
+
+  .main_poster {
+    img {}
+  }
+
+  .writers {
+    .writer {}
+  }
+
+  .directors {
+    .director {}
+  }
+
+  .stars {
+    .star {}
+  }
+
+  .genres {
+    .genre {}
+  }
+
+  .pictures {
+    .picture {}
+  }
+
+  .trailers {
+    .trailer {}
+  }
+}
