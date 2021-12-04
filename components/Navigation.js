@@ -36,16 +36,16 @@ const Navigation = ({ locale, locales }) => {
     <header className={styles.navigationwrapper}>
       <nav className={styles.navigation} role="navigation">
 
-        <div className={styles.navlogo}>
-        <div className="">
-          <img
-            src="https://a.storyblok.com/f/136715/500x500/90bba15187/trip-advisor-photoroom.png"
-            alt="IMDBPlus Logo"
-            className=""
-          />
+      <div className={styles.navlogo}>
+          <a href="/">
+            <img
+              src="https://a.storyblok.com/f/136715/500x500/90bba15187/trip-advisor-photoroom.png"
+              alt="IMDBPlus Logo"
+              className=""
+            />
+          </a>
         </div>
         
-        </div>
         <div className={styles.navlinkswrapper}>
           <div className={styles.navlinks}>
             <div className={styles.navlink}>
@@ -58,7 +58,7 @@ const Navigation = ({ locale, locales }) => {
               <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/restaurant`} className={styles.newsitem}>{resolveRestaurants[locale]}</a>
+              <a href={`${defaultLocale}pages/restaurants`} className={styles.newsitem}>{resolveRestaurants[locale]}</a>
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
