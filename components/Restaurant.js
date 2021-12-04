@@ -35,13 +35,24 @@ const Restaurant = ({ data, level }) => {
             {content.title}
           </h1>
 
-          <div className={styles.score}>
-            Population: {render(content.population)}
+          <div className={styles.rating}>
+            Rating: {render(content.rating)}
           </div>
+
+          <div className={styles.rating}>
+            Price: {render(content.price)}
+          </div>
+
+          
 
           <div className={styles.description}>
             {render(content.description)}
           </div>
+        
+          <div className={styles.description}>
+            {render(content.adress)}
+          </div>
+
         </div>
       </main>
     </SbEditable>
