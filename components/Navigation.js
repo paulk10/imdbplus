@@ -14,6 +14,10 @@ const Navigation = ({ locale, locales }) => {
     en: 'Restaurants',
     nl: 'Resto',
   }
+  const resolveBars = {
+    en: 'Bars',
+    nl: 'Bars',
+  }
   const resolvePeople = {
     en: 'People',
     nl: 'Mensen',
@@ -39,7 +43,7 @@ const Navigation = ({ locale, locales }) => {
       <div className={styles.navlogo}>
           <a href="/">
             <img
-              src="https://a.storyblok.com/f/136715/500x500/90bba15187/trip-advisor-photoroom.png"
+              src="https://a.storyblok.com/f/136715/372x373/e6af83683f/trip-advisor-photoroom.png"
               alt="IMDBPlus Logo"
               className=""
             />
@@ -55,14 +59,12 @@ const Navigation = ({ locale, locales }) => {
               <a href={`${defaultLocale}pages/restaurants`} className={styles.newsitem}>{resolveRestaurants[locale]}</a>
             </div>
             <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/bars`} className={styles.newsitem}>{resolveBars[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
             </div>
-            <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
-            </div>
-            <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
-            </div>
+       
           </div>
           <div className={styles.navlocales}>
             {

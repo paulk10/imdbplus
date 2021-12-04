@@ -21,6 +21,11 @@ const NavigationMobile = ({ locale, locales }) => {
     nl: 'Resto',
   }
 
+  const resolveBars = {
+    en: 'Bars',
+    nl: 'Bars',
+  }
+
   const resolveNews = {
     en: 'News',
     nl: 'Nieuws',
@@ -44,7 +49,7 @@ const NavigationMobile = ({ locale, locales }) => {
         <div className={styles.navlogo}>
           <a href="/">
             <img
-              src="https://a.storyblok.com/f/136715/500x500/90bba15187/trip-advisor-photoroom.png"
+              src="https://a.storyblok.com/f/136715/372x373/e6af83683f/trip-advisor-photoroom.png"
               alt="IMDBPlus Logo"
               className=""
             />
@@ -58,6 +63,9 @@ const NavigationMobile = ({ locale, locales }) => {
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/restaurants`} className={styles.newsitem}>{resolveRestaurants[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/bars`} className={styles.newsitem}>{resolveBars[locale]}</a>
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>

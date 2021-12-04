@@ -29,6 +29,8 @@ import City from './City'
 import CityList from './CityList'
 import Restaurant from './Restaurant'
 import RestaurantList from './RestaurantList'
+import Bar from './Bar'
+import BarList from './BarList'
 
 const Components = {
   'teaser': Teaser,
@@ -61,7 +63,9 @@ const Components = {
   'city':City,
   'citylist':CityList,
   'restaurant':Restaurant,
-  'restaurantlist':RestaurantList
+  'restaurantlist':RestaurantList,
+  'bar':Bar,
+  'barlist':BarList
 
 }
 
