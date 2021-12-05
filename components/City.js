@@ -7,6 +7,7 @@ import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 import RelatedItemGallery from "./RelatedItemGallery"
 import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
+import DynamicComponent from './DynamicComponent' //this needs to be imported so that the blocks work
 
 const City = ({ data, level }) => {
   if (level === 'data') {
@@ -35,6 +36,11 @@ const City = ({ data, level }) => {
             {render(content.description)}
           </div>
         </div>
+
+        {content.body ? content.body.map((content) =>
+          <DynamicComponent data={content} key={content._uid} />
+        ) : null}
+
       </main>
     </SbEditable>
   )

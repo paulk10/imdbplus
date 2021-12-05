@@ -7,6 +7,7 @@ import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 import RelatedItemGallery from "./RelatedItemGallery"
 import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
+import DynamicComponent from './DynamicComponent' //this needs to be imported so that the blocks work
 
 const Bar = ({ data, level }) => {
   if (level === 'data') {
@@ -29,6 +30,10 @@ const Bar = ({ data, level }) => {
           <div className={styles.description}>
             {render(content.description)}
           </div>
+
+          {content.body ? content.body.map((content) =>
+          <DynamicComponent data={content} key={content._uid} />
+        ) : null}
 
         </div>
       </main>
