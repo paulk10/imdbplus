@@ -15,6 +15,17 @@ const NavigationMobile = ({ locale, locales }) => {
     en: 'People',
     nl: 'Mensen',
   }
+
+  const resolveRestaurants = {
+    en: 'Restaurants',
+    nl: 'Resto',
+  }
+
+  const resolveBars = {
+    en: 'Bars',
+    nl: 'Bars',
+  }
+
   const resolveNews = {
     en: 'News',
     nl: 'Nieuws',
@@ -38,8 +49,8 @@ const NavigationMobile = ({ locale, locales }) => {
         <div className={styles.navlogo}>
           <a href="/">
             <img
-              src="https://a.storyblok.com/f/133261/3039x582/a60d166ec2/logo-colored-full.png/m/200x0"
-              alt="IMDBPlus Logo"
+              src="https://a.storyblok.com/f/136715/372x373/e6af83683f/trip-advisor-photoroom.png"
+              alt="TripAdvisorPlus Logo"
               className=""
             />
           </a>
@@ -47,20 +58,23 @@ const NavigationMobile = ({ locale, locales }) => {
         <div className={styles.hamburger} onClick={() => setNavstate(!navstate)}><div className={styles.line}></div><div className={styles.line}></div><div className={styles.line}></div></div>
         {navstate&&<div className={styles.navlinkswrapper}>
           <div className={styles.navlinks}>
+          <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/cities`} className={styles.movie}>{resolveCities[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/restaurants`} className={styles.newsitem}>{resolveRestaurants[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/bars`} className={styles.newsitem}>{resolveBars[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
+            </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/cities`} className={styles.movie}>{resolveCities[locale]}</a>
-            </div>
-            <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
-            </div>
-            <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/news`} className={styles.newsitem}>{resolveNews[locale]}</a>
-            </div>
-            <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
             </div>
           </div>
           <div className={styles.navlocales}>

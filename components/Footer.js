@@ -2,17 +2,17 @@ import styles from "../styles/Footer.module.scss"
 
 const Footer = () => {
   return (
-    <footer className={styles.footerwrapper}>
+<footer className={styles.footerwrapper}>
       <div className={styles.footer}>
 
         <div className="">
           <img
-            src="https://a.storyblok.com/f/133261/3039x582/a60d166ec2/logo-colored-full.png/m/200x0"
-            alt="IMDBPlus Logo"
+            src="https://a.storyblok.com/f/136715/167x167/71e8c9a784/trip-advisor-photoroom_small.jpg"
+            alt="TripAdvisorPlus Logo"
             className=""
           />
         </div>
-        <p>IMDB Plus is every bit as good as IMDB. Plus!</p>
+        <p>TripAdvisorPlus is every bit as good as TripAdvisor. Plus!</p>
       </div>
     </footer>
 

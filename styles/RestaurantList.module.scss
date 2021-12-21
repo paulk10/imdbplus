@@ -1,0 +1,54 @@
+@import '../styles/colors';
+
+.list {
+  margin-bottom: 40px;
+  a{
+    text-decoration: none;
+    color: black;
+    &:active{
+      color: black;
+    }
+  }
+  .item {
+    border:10px solid black;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 10px 10px 0 $color-primary;
+    .date {}
+
+    .mainpart {
+      .title {
+        margin: 10px 0;
+      }
+
+      .introduction {}
+    }
+
+  }
+
+  .orderbypicker{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .orderbytitle{
+      font-weight: 400;
+    }
+    .orderbyoptions{
+      margin-left: 20px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      .orderbyoption{
+        cursor: pointer;
+        margin-right: 10px;
+        background-color: $color-background-soft;
+        padding: 5px 10px;
+
+      }
+    }
+  }
+
+
+
+
+}

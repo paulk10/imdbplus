@@ -10,6 +10,14 @@ const Navigation = ({ locale, locales }) => {
     en: 'Cities',
     nl: 'Steden',
   }
+  const resolveRestaurants = {
+    en: 'Restaurants',
+    nl: 'Resto',
+  }
+  const resolveBars = {
+    en: 'Bars',
+    nl: 'Bars',
+  }
   const resolvePeople = {
     en: 'People',
     nl: 'Mensen',
@@ -32,33 +40,31 @@ const Navigation = ({ locale, locales }) => {
     <header className={styles.navigationwrapper}>
       <nav className={styles.navigation} role="navigation">
 
-        <div className={styles.navlogo}>
-          <a href={homeurl}>
-            {/* <img
-              src="https://a.storyblok.com/f/133261/3039x582/a60d166ec2/logo-colored-full.png/m/200x0"
-              alt="IMDBPlus Logo"
+      <div className={styles.navlogo}>
+          <a href="/">
+            <img
+              src="https://a.storyblok.com/f/136715/372x373/e6af83683f/trip-advisor-photoroom.png"
+              alt="TripAdvisorPlus Logo"
               className=""
-            /> */}
-            <Image src="/logo-colored-full.png" alt="IMDBPlus Logo" width="128" height="25" />
+            />
           </a>
         </div>
+        
         <div className={styles.navlinkswrapper}>
           <div className={styles.navlinks}>
-            <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
-            </div>
-            <div className={styles.navlink}>
+          <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/cities`} className={styles.movie}>{resolveCities[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
+              <a href={`${defaultLocale}pages/restaurants`} className={styles.newsitem}>{resolveRestaurants[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/news`} className={styles.newsitem}>{resolveNews[locale]}</a>
+              <a href={`${defaultLocale}pages/bars`} className={styles.newsitem}>{resolveBars[locale]}</a>
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
             </div>
+       
           </div>
           <div className={styles.navlocales}>
             {
