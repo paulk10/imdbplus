@@ -41,12 +41,13 @@ const Navigation = ({ locale, locales }) => {
       <nav className={styles.navigation} role="navigation">
 
       <div className={styles.navlogo}>
-          <a href="/">
-            <img
-              src="https://a.storyblok.com/f/136715/372x373/e6af83683f/trip-advisor-photoroom.png"
-              alt="TripAdvisorPlus Logo"
+          <a href={homeurl}>
+            {/* <img
+              src="https://a.storyblok.com/f/133261/3039x582/a60d166ec2/logo-colored-full.png/m/200x0"
+              alt="IMDBPlus Logo"
               className=""
-            />
+            /> */}
+            <Image src="/trip-advisor-+-logo .png" alt="IMDBPlus Logo" width="128" height="128" />
           </a>
         </div>
         
