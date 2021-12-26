@@ -69,7 +69,7 @@ const FrontpageSlideshow = ({ data, level, locale }) => {
           const lang = item.lang === "default" ? "/en" : `/${item.lang}`;
           return (
             <a
-              href={`${lang}/newsitem/${item.slug}`}
+              href={`${lang}/city/${item.slug}`}
             >
               <div className={styles.item}>
                 <div className={styles.mainpicture} style={{ backgroundImage: `url("${item.content.mainpicture.filename}")` }}>

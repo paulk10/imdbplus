@@ -31,6 +31,7 @@ import Restaurant from './Restaurant'
 import RestaurantList from './RestaurantList'
 import Bar from './Bar'
 import BarList from './BarList'
+import TopRestaurant from './TopRestaurant'
 
 const Components = {
   'teaser': Teaser,
@@ -65,7 +66,8 @@ const Components = {
   'restaurant':Restaurant,
   'restaurantlist':RestaurantList,
   'bar':Bar,
-  'barlist':BarList
+  'barlist':BarList,
+  'toprestaurants':TopRestaurant
 
 }
 
