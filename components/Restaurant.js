@@ -25,7 +25,7 @@ const Restaurant = ({ data, level }) => {
           </h1>
 
           <div className={styles.score}>
-             Rating: {render(content.rating)}
+             Rating: {render(content.rating)}/10
            </div>
 
           <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}></div>
