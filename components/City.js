@@ -8,6 +8,8 @@ import RelatedItemGallery from "./RelatedItemGallery"
 import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
 import DynamicComponent from './DynamicComponent' //this needs to be imported so that the blocks work
+import { FacebookShareButton, FacebookIcon,TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from 'next-share';
+
 
 const City = ({ data, level }) => {
   if (level === 'data') {
@@ -25,6 +27,12 @@ const City = ({ data, level }) => {
           <h1 className={styles.title}>
             {content.title}
           </h1>
+
+          <div className="sharebar">
+            <FacebookShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} quote={content.short} hashtag={'#imdbplus'}><FacebookIcon size={32} round /></FacebookShareButton>
+            <LinkedinShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} summary={content.short}><LinkedinIcon size={32} round /></LinkedinShareButton>
+            <TwitterShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} title={content.title}><TwitterIcon size={32} round /></TwitterShareButton>
+          </div>
 
           <div className={styles.score}>
             Population: {render(content.population)}

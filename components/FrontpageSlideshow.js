@@ -42,7 +42,7 @@ const FrontpageSlideshow = ({ data, level, locale }) => {
 
   const [newsitems, setNewsitems] = useState([]);
 
-  getFPSData(content._uid, locale, content.preview = false, 'newsitem').then(
+  getFPSData(content._uid, locale, content.preview = false, 'city').then(
     function (result) {
       setNewsitems(result.data.stories);
     });
