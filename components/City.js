@@ -18,6 +18,12 @@ const City = ({ data, level }) => {
     var content = data;
   }
 
+  const [cities, setCities] = useState([]);
+  getData(data.story.uuid, data.story.lang, content.preview = false, 'restaurant', 'city').then(
+    function (result) {
+      setCities(result.data.stories);
+    });
+
   //returning the HTML
   return (
     <SbEditable content={content} key={content._uid}>
@@ -45,9 +51,7 @@ const City = ({ data, level }) => {
           </div>
         </div>
 
-        {content.body ? content.body.map((content) =>
-          <DynamicComponent data={content} key={content._uid} />
-        ) : null}
+        {cities&&cities.length>0&&<RelatedItemGallery items={cities} title="Restaurants" type="city"></RelatedItemGallery>}
 
       </main>
     </SbEditable>
