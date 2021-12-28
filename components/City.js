@@ -18,11 +18,17 @@ const City = ({ data, level }) => {
     var content = data;
   }
 
-  const [cities, setCities] = useState([]);
+  const [restaurants, setRestaurants] = useState([]);
   getData(data.story.uuid, data.story.lang, content.preview = false, 'restaurant', 'city').then(
     function (result) {
-      setCities(result.data.stories);
+      setRestaurants(result.data.stories);
     });
+
+    const [bars, setBars] = useState([]);
+    getData(data.story.uuid, data.story.lang, content.preview = false, 'bar', 'city').then(
+      function (result) {
+        setBars(result.data.stories);
+      });
 
   //returning the HTML
   return (
@@ -51,7 +57,8 @@ const City = ({ data, level }) => {
           </div>
         </div>
 
-        {cities&&cities.length>0&&<RelatedItemGallery items={cities} title="Restaurants" type="city"></RelatedItemGallery>}
+        {restaurants&&restaurants.length>0&&<RelatedItemGallery items={restaurants} title="Restaurants" type="restaurant"></RelatedItemGallery>}
+        {bars&&bars.length>0&&<RelatedItemGallery items={bars} title="Bars" type="bar"></RelatedItemGallery>}
 
       </main>
     </SbEditable>
