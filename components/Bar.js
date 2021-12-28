@@ -17,6 +17,12 @@ const Bar = ({ data, level }) => {
     var content = data;
   }
 
+  if (content.city) {
+    var cities = data.rels.filter(obj => {
+      return content.city.includes(obj.uuid);
+    });
+    }
+
   //returning the HTML
   return (
     <SbEditable content={content} key={content._uid}>
@@ -27,9 +33,9 @@ const Bar = ({ data, level }) => {
           </h1>
 
           <div className="sharebar">
-            <FacebookShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} quote={content.short} hashtag={'#imdbplus'}><FacebookIcon size={32} round /></FacebookShareButton>
-            <LinkedinShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} summary={content.short}><LinkedinIcon size={32} round /></LinkedinShareButton>
-            <TwitterShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} title={content.title}><TwitterIcon size={32} round /></TwitterShareButton>
+            <FacebookShareButton url={"http://tripadvisorplus.vercel.app/"+data.story.full_slug} quote={content.short} hashtag={'#imdbplus'}><FacebookIcon size={32} round /></FacebookShareButton>
+            <LinkedinShareButton url={"http://tripadvisorplus.vercel.app/"+data.story.full_slug} summary={content.short}><LinkedinIcon size={32} round /></LinkedinShareButton>
+            <TwitterShareButton url={"http://tripadvisorplus.vercel.app/"+data.story.full_slug} title={content.title}><TwitterIcon size={32} round /></TwitterShareButton>
           </div>
 
           <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}></div>
@@ -38,9 +44,7 @@ const Bar = ({ data, level }) => {
             {render(content.description)}
           </div>
 
-          {content.body ? content.body.map((content) =>
-          <DynamicComponent data={content} key={content._uid} />
-        ) : null}
+          {cities && cities.length > 0 && <SmallCardList items={cities} title={"This Restaurant is located in"} type="city"></SmallCardList>}
 
         </div>
       </main>

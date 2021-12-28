@@ -7,6 +7,7 @@ import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 import RelatedItemGallery from "./RelatedItemGallery"
 import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
+import { FacebookShareButton, FacebookIcon,TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from 'next-share';
 
 const Restaurant = ({ data, level }) => {
   if (level === 'data') {
@@ -15,6 +16,12 @@ const Restaurant = ({ data, level }) => {
     var content = data;
   }
   
+if (content.city) {
+var cities = data.rels.filter(obj => {
+  return content.city.includes(obj.uuid);
+});
+}
+
   //returning the HTML
   return (
     <SbEditable content={content} key={content._uid}>
@@ -23,6 +30,12 @@ const Restaurant = ({ data, level }) => {
           <h1 className={styles.title}>
           {content.title}
           </h1>
+
+          <div className="sharebar">
+            <FacebookShareButton url={"http://tripadvisorplus.vercel.app/"+data.story.full_slug} quote={content.short} hashtag={'#imdbplus'}><FacebookIcon size={32} round /></FacebookShareButton>
+            <LinkedinShareButton url={"http://tripadvisorplus.vercel.app/"+data.story.full_slug} summary={content.short}><LinkedinIcon size={32} round /></LinkedinShareButton>
+            <TwitterShareButton url={"http://tripadvisorplus.vercel.app/"+data.story.full_slug} title={content.title}><TwitterIcon size={32} round /></TwitterShareButton>
+          </div>
 
           <div className={styles.score}>
              Rating: {render(content.rating)}/10
@@ -38,6 +51,8 @@ const Restaurant = ({ data, level }) => {
             {render(content.adress)}
             </div>
 
+            {cities && cities.length > 0 && <SmallCardList items={cities} title={"This Restaurant is located in"} type="city"></SmallCardList>}
+
           </div>
       </main>
     </SbEditable>
@@ -45,3 +60,4 @@ const Restaurant = ({ data, level }) => {
 }
 
 export default Restaurant
+
